@@ -1,0 +1,245 @@
+// @keyframes example {
+//   0%   { left:0px;}
+//   100% { left:400px;}
+// }
+
+
+html, body, pre, code, kbd, samp {
+  font-family: "Press Start 2P";
+}
+.header {
+  padding: 2%;
+  margin: 1%;
+  
+  #tit{
+    display: flex;
+    font-size: 1.2em;
+    margin-left: 40%;
+  }
+}
+
+.navbar {
+  display: flex;
+  margin: 1%;
+  // border-top: chartreuse solid 3px;
+  // border-bottom: chartreuse solid 3px;
+  a {
+    // color: chartreuse;
+    padding: 1% 2%;
+    text-align: right;
+    text-decoration: none;
+    margin-right: 1%;
+    // &:hover {
+    //   // background-color: #b3ff66;
+    //   // color: black;
+    // }
+  }
+  #user {
+    float: right;
+  }
+}
+
+.register{
+  margin: 1%;
+  
+}
+
+.input{
+  width: 36%;
+  align-items: center;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 1.2%;
+}
+
+.main, .side, .footer, .header, .navbar, .register, .login{
+  background-color:  #ffdab3;
+}
+
+body {
+  // font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  background-color: #1aa3ff;
+  // color: chartreuse;
+  // background-image: url("img/background.jpg");
+  // border: chartreuse solid 3px;
+}
+
+.main {
+  // margin: 1%;
+  padding: 2%;
+  width: 65%;
+
+  
+}
+
+.caratula{
+  width: 20%;
+  margin-right: 3%;
+  img{
+    width: 100%;
+  }
+}
+
+hr {
+  border: 0 none black;
+  border-top: 4px solid black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: row;
+  margin: 1%;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  width: 27%;
+  padding: 1%;
+  margin-left: 1%;
+
+  
+ 
+  // border-right: chartreuse solid 3px;
+}
+
+// .seleccionado {
+//   // color: #36b4a8;
+//   // border-color: chartreuse;
+// }
+
+.footer {
+  margin: 1%;
+  padding: 0.5%;
+  // border-top: 3px solid chartreuse;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+.margin {
+  margin: 1%;
+}
+
+#myCanvas{
+
+  display: none;
+
+  border: 4px solid black;
+  
+}
+#juego{
+  // width: 70%;
+  margin: 0 auto;
+}
+
+#iz, #der, #fire{
+  display: none;
+}
+
+.mensaje{
+  text-align: center;
+  margin: 1%;
+
+  table{
+    width:90%;
+  }
+}
+
+
+  .ness-btn{
+    border-image-repeat: stretch !important;
+  }
+
+  #dialog-default{
+    display: none;
+  }
+
+  #instrucciones{
+    text-align: center;
+    margin: 1%;
+  }
+  #play{
+    width: 30%;
+    height: 15%;
+  }
+  
+
+
+@media only screen and (max-width: 600px) {
+  // .header {
+  //   width: 100%;
+  //   img {
+  //     width: 25%;
+  //   }
+  // }
+.header{
+  #tit{
+    
+    margin-left: 1%;
+  }
+}
+
+body{
+font-size: 0.7em;
+}
+
+
+  .row,.navbar {
+    flex-direction: column;
+    a{
+      margin: 3%;
+    }
+    // width: 100%;
+  }
+  // .row {
+  //   flex-direction: column;
+  //   width: 100%;
+  // }
+  .main{
+      width: 93%;
+      margin: 1%;
+      .caratula{
+        img {
+          width: 200%;
+          
+        }
+        margin-left: 4%;
+        margin-right: 22%;
+
+      }
+      
+  }
+
+  .side{
+    width: 95%;
+    // border-bottom: 3px solid chartreuse;
+    // border-right: 0px ;
+  }
+
+  .InFoot{
+    width: 50%;
+  }
+
+ 
+
+  #iz, #der, #fire{
+    display: inline-block;
+    user-select: none;
+    width: 20%;
+    font-size: 2em;
+
+  }
+
+  .foro{
+    font-size: 0.7em;
+  }
+
+  
+
+}
