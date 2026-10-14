@@ -1,0 +1,10 @@
+/.hosting/
+/.playwright-cli/
+/output/
+.env
+.env.*
+!.env.example
+*.private.json
+*.pem
+*.key
+

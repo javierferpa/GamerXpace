@@ -1,0 +1,24 @@
+name: Check hosting package
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify original application files
+        run: node hosting/package.mjs --verify-only
+      - name: Check PHP syntax
+        run: find TFG -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Validate deployment package without secrets or historical records
+        run: node hosting/package.mjs --origin https://migration-test.invalid --data empty
+      - name: Ensure application source is unchanged
+        run: git diff --exit-code -- TFG
