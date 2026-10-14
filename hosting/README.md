@@ -4,7 +4,7 @@ La aplicación se conserva en PHP y MySQL, con sus rutas originales bajo `/tfg/`
 
 ## Conservación del código
 
-Los 49 archivos de `TFG/` se conservan byte a byte respecto al commit `a29de7b3fd0c3710d7a0eb28aaae58660f659683`. `source-manifest.json` registra sus hashes SHA-256; el empaquetado se detiene si alguno cambia.
+Los 49 archivos de `TFG/` se conservan byte a byte respecto al commit `a29de7b3fd0c3710d7a0eb28aaae58660f659683`. `source-manifest.json` registra los hashes SHA-256 del contenido original en Git; el empaquetado se detiene si alguno cambia. Usa los objetos de Git para que los filtros de saltos de línea de Windows no alteren la copia publicada y rechaza cambios locales en `TFG/`.
 
 En la copia para el servidor, `conexion.php` conserva su clase de base de datos y cambia únicamente los valores de conexión para leerlos de un archivo privado. La lógica, los juegos, los formularios, el HTML, el CSS y JavaScript originales se mantienen.
 

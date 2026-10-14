@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 import { readFile, mkdir, mkdtemp, copyFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve, join, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -11,8 +12,13 @@ const option = name => {
 };
 const sourceManifest = JSON.parse(await readFile(join(root, 'hosting/source-manifest.json'), 'utf8'));
 const hash = content => createHash('sha256').update(content).digest('hex');
+// Git is authoritative: Windows checkout filters can change only line endings.
+execFileSync('git', ['diff', '--quiet', 'HEAD', '--', 'TFG'], { cwd: root });
+const sourceFiles = new Map();
 for (const [path, expected] of Object.entries(sourceManifest.files)) {
-  if (hash(await readFile(join(root, path))) !== expected) throw new Error(`Original source changed: ${path}`);
+  const content = execFileSync('git', ['show', `HEAD:${path}`], { cwd: root, maxBuffer: 16 * 1024 * 1024 });
+  if (hash(content) !== expected) throw new Error(`Original source changed: ${path}`);
+  sourceFiles.set(path, content);
 }
 if (args.includes('--verify-only')) {
   console.log(`${Object.keys(sourceManifest.files).length} original TFG files verified unchanged.`);
@@ -42,12 +48,12 @@ for (const [path, expected] of Object.entries(sourceManifest.files)) {
   const destination = join(release, 'public/tfg', relative);
   await mkdir(dirname(destination), { recursive: true });
   if (relative !== 'conexion.php') {
-    await copyFile(join(root, path), destination);
+    await writeFile(destination, sourceFiles.get(path));
     if (hash(await readFile(destination)) !== expected) throw new Error(`Copy changed: ${path}`);
     receipts.push({ path: `tfg/${relative}`, unchanged: true });
     continue;
   }
-  const original = await readFile(join(root, path), 'utf8');
+  const original = sourceFiles.get(path).toString('utf8');
   let configured = original;
   const settings = { host: "['host']", port: "['port']", user: "['user']", password: "['password']", dbname: "['database']" };
   for (const [variable, key] of Object.entries(settings)) {
@@ -76,7 +82,7 @@ if (configFile) {
   databasePhp = `<?php\nreturn json_decode(base64_decode('${encoded}'), true, 512, JSON_THROW_ON_ERROR);\n`;
 }
 await writeFile(join(release, 'private/database.php'), databasePhp, { mode: 0o600 });
-let sql = await readFile(join(root, 'TFG/id16510789_gamewxpace.sql'), 'utf8');
+let sql = sourceFiles.get('TFG/id16510789_gamewxpace.sql').toString('utf8');
 if (dataMode === 'empty') sql = sql.replace(/INSERT INTO `[\s\S]*?;\r?\n/g, '');
 await writeFile(join(release, 'private/database.sql'), sql, { mode: 0o600 });
 
@@ -92,4 +98,3 @@ await writeFile(join(release, 'manifest.json'), JSON.stringify({
 }, null, 2) + '\n');
 console.log(JSON.stringify({ release, originalFilesUnchanged: Object.keys(sourceManifest.files).length,
   publishedFiles: receipts.length, privateDatabaseConfigured: Boolean(configFile), dataMode }, null, 2));
-
