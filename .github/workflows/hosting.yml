@@ -17,7 +17,7 @@ jobs:
       - name: Verify original application files
         run: node hosting/package.mjs --verify-only
       - name: Check PHP syntax
-        run: find TFG -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: find TFG hosting -type f -name '*.php' -print0 | xargs -0 -n1 php -l
       - name: Validate deployment package without secrets or historical records
         run: node hosting/package.mjs --origin https://migration-test.invalid --data empty
       - name: Ensure application source is unchanged

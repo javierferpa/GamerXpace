@@ -1,0 +1,64 @@
+{
+  "batch": "gamerxpace-ejemplos-2026-10-14",
+  "users": [
+    {"name":"pixelnora","birth":"1999-04-17","created":"2026-10-04 18:05:00","avatar":"nes-kirby","arkanoid":{"best":36,"total":114},"naves":{"best":18,"total":53}},
+    {"name":"orbitazul","birth":"2001-02-08","created":"2026-10-04 18:37:00","avatar":"nes-pokeball","arkanoid":{"best":54,"total":183},"naves":{"best":39,"total":142}},
+    {"name":"retrochema","birth":"1988-11-23","created":"2026-10-05 20:14:00","avatar":"nes-mario","arkanoid":{"best":86,"total":312},"naves":{"best":27,"total":89}},
+    {"name":"lluvia8bit","birth":"1997-06-30","created":"2026-10-06 09:42:00","avatar":"nes-squirtle","arkanoid":{"best":28,"total":77},"naves":{"best":14,"total":46}},
+    {"name":"kaitobyte","birth":"1995-12-12","created":"2026-10-07 21:18:00","avatar":"nes-ash","arkanoid":{"best":63,"total":205},"naves":{"best":45,"total":176}}
+  ],
+  "topics": [
+    {
+      "title":"Cómo evitar perder la bola en Arkanoid",
+      "author":"pixelnora","created":"2026-10-04 19:00:00",
+      "messages":[
+        {"author":"pixelnora","at":"2026-10-04 19:00:00","text":"La primera pantalla va bastante bien, pero luego empiezo a mirar los ladrillos y se me escapa la bola. ¿Algún consejo para no mover la pala a lo loco?","likedBy":["orbitazul","retrochema"]},
+        {"author":"orbitazul","at":"2026-10-05 18:22:00","text":"A mí me ayuda mirar por dónde va a bajar la bola y hacer movimientos cortos. Si espero al último momento, acabo cruzando toda la pantalla para nada.","likedBy":["pixelnora","retrochema","lluvia8bit"]},
+        {"author":"retrochema","at":"2026-10-06 20:36:00","text":"El último ladrillo es el que más me desespera. Cuando quedan pocos, intento mantener la pala cerca del centro y corregir con calma.","likedBy":["pixelnora","orbitazul"]},
+        {"author":"pixelnora","at":"2026-10-07 18:10:00","text":"Probé lo de los movimientos cortos y pasé de 12 a 24. Parece una tontería, pero dejar de perseguir la bola todo el rato cambia bastante la partida.","likedBy":["lluvia8bit","retrochema"]},
+        {"author":"lluvia8bit","at":"2026-10-08 17:42:00","text":"Con las flechas me sale mejor. Si me quedo pegada a un borde casi siempre pierdo la siguiente bola, así que intento volver al centro cuando tengo margen.","likedBy":["pixelnora","orbitazul"]},
+        {"author":"kaitobyte","at":"2026-10-11 12:15:00","text":"Otro truco: no cambies de dirección tres veces antes de que baje. Yo lo hacía por nervios y terminaba lejos del sitio donde tenía que estar.","likedBy":["pixelnora","retrochema"]},
+        {"author":"pixelnora","at":"2026-10-14 12:15:00","text":"¡Esta mañana llegué a 36! Ya consigo pasar la primera pantalla sin gastar todas las vidas. Gracias por los consejos, ahora voy a por los 40.","likedBy":["orbitazul","lluvia8bit","kaitobyte"]}
+      ]
+    },
+    {
+      "title":"Naves: disparar sin perder la posición",
+      "author":"orbitazul","created":"2026-10-07 21:45:00",
+      "messages":[
+        {"author":"orbitazul","at":"2026-10-07 21:45:00","text":"En Naves me concentro tanto en disparar que dejo de colocar bien la nave. ¿Preferís limpiar un lado primero o moveros de un extremo al otro?","likedBy":["kaitobyte","retrochema"]},
+        {"author":"kaitobyte","at":"2026-10-08 19:12:00","text":"Intento quitar las de un extremo primero. Si voy cruzando todo el rato fallo más disparos. Para los controles, A y D con F me resultan bastante cómodos.","likedBy":["orbitazul","lluvia8bit"]},
+        {"author":"retrochema","at":"2026-10-09 20:05:00","text":"También uso F. La primera vez me pasé media partida moviéndome sin dar ni una. Ahora hago un par de intentos de Naves después de jugar a Arkanoid.","likedBy":["pixelnora"]},
+        {"author":"lluvia8bit","at":"2026-10-10 11:20:00","text":"Mi mejor partida sigue en 14, pero ya no me voy siempre al borde. Voy a probar a centrarme en un lado y ver si consigo pasar de 20.","likedBy":["orbitazul","kaitobyte"]},
+        {"author":"orbitazul","at":"2026-10-13 22:10:00","text":"Con esa idea llegué a 39. En cuanto me entra la prisa vuelvo a moverme demasiado, pero al menos ya sé qué estaba haciendo mal.","likedBy":["retrochema","lluvia8bit"]}
+      ]
+    },
+    {
+      "title":"Vuelta a los juegos de recreativa",
+      "author":"retrochema","created":"2026-10-06 20:30:00",
+      "messages":[
+        {"author":"retrochema","at":"2026-10-06 20:30:00","text":"Entré por el aspecto de la web y me quedé haciendo partidas cortas. El Arkanoid me recuerda a las tardes de recreativa, sobre todo cuando solo queda un ladrillo y no hay manera de darle.","likedBy":["pixelnora","orbitazul"]},
+        {"author":"lluvia8bit","at":"2026-10-08 10:06:00","text":"A mí me gusta ir alternando los dos juegos. Cuando me atasco con la bola cambio a las naves un rato y luego vuelvo con menos prisas.","likedBy":["retrochema","pixelnora"]},
+        {"author":"pixelnora","at":"2026-10-09 18:25:00","text":"Mi problema es entrar para una partida de cinco minutos y acabar diciendo venga, una más. Al menos el perfil deja ver si voy mejorando.","likedBy":["orbitazul","retrochema","kaitobyte"]},
+        {"author":"kaitobyte","at":"2026-10-11 12:40:00","text":"Eso de una más nos pasa a todos. Prefiero intentar superar mi propia marca a mirar el primer puesto todo el rato.","likedBy":["pixelnora","lluvia8bit"]}
+      ]
+    },
+    {
+      "title":"¿Flechas o A y D para jugar?",
+      "author":"lluvia8bit","created":"2026-10-08 17:15:00",
+      "messages":[
+        {"author":"lluvia8bit","at":"2026-10-08 17:15:00","text":"Yo estoy usando las flechas en los dos juegos, pero veo que también se puede con A y D. ¿Os cambia mucho la precisión o es solo acostumbrarse?","likedBy":["pixelnora"]},
+        {"author":"pixelnora","at":"2026-10-08 18:32:00","text":"En Arkanoid prefiero las flechas. Con A y D también puedo, pero tardo más en reaccionar cuando la bola viene desde un lateral.","likedBy":["lluvia8bit"]},
+        {"author":"orbitazul","at":"2026-10-09 21:14:00","text":"Para Naves uso A y D más F, y para Arkanoid vuelvo a las flechas. Un poco raro cambiar, pero cada juego me pide colocar la mano de una forma.","likedBy":["lluvia8bit","kaitobyte"]}
+      ]
+    },
+    {
+      "title":"Pequeños retos para esta semana",
+      "author":"kaitobyte","created":"2026-10-10 19:25:00",
+      "messages":[
+        {"author":"kaitobyte","at":"2026-10-10 19:25:00","text":"Me he puesto dos retos: llegar a 70 en Arkanoid y a 50 en Naves. Sin prisas por el ranking, solo para tener una marca a la que apuntar. ¿Qué estáis intentando vosotros?","likedBy":["retrochema","pixelnora"]},
+        {"author":"retrochema","at":"2026-10-11 20:42:00","text":"En Arkanoid llegué a 86, pero no lo repito ni de lejos en todas las partidas. Ahora quiero pasar de 30 en Naves; de momento me quedo en 27.","likedBy":["kaitobyte","orbitazul"]},
+        {"author":"kaitobyte","at":"2026-10-13 22:35:00","text":"Actualizo: 63 en Arkanoid y 45 en Naves. Estoy cerca de los dos, así que mantengo el reto para el fin de semana.","likedBy":["retrochema","lluvia8bit","pixelnora"]}
+      ]
+    }
+  ]
+}
